@@ -1,0 +1,11 @@
+// Config
+// SIZE
+FRAME_SZ = [520, 460, 500];
+FRAME_X = FRAME_SZ[0];
+FRAME_Y = FRAME_SZ[1];
+FRAME_Z = FRAME_SZ[2];
+// COLORS
+MOTORS_COLOR = "DimGrey";
+PROFILE_COLOR = "Silver";
+// VECTORS
+ZERO = [0, 0, 0];
