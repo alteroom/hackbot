@@ -10,6 +10,8 @@ module PROFILE2020(length){
     color(PROFILE_COLOR)
         linear_extrude(height=length, slices=1)
             CONTOUR2020();
+    echo (str("PROFILE 20x20x",length));
+    
 }
 
 module PROFILE4020(length, length2=-1){
@@ -21,6 +23,7 @@ module PROFILE4020(length, length2=-1){
             MOV(X(20)) CONTOUR2020();
         }
     }
+    echo (str("PROFILE 40x20x",(length>length2?length:length2)));
 }
 
 
