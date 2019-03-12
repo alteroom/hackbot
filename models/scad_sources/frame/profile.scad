@@ -3,8 +3,18 @@ include <../config.scad>;
 use <../utils.scad>;
 
 PROFILE2020(50);
-
 MOV(Y(50)) PROFILE4020(50, 60);
+MOV(Y(-80)) CORNER40402(60);
+
+module CORNER40402(length, w=40, h=40)
+{
+    color(PROFILE_COLOR)
+        union(){
+            cube([w, 2, length]);
+            cube([2, h, length]);
+        }
+}
+
 
 module PROFILE2020(length){
     color(PROFILE_COLOR)
