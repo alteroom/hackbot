@@ -29,5 +29,12 @@ module MGN9(length){
 
 module MGN9C(){
     color(MGN9C_COLOR)
-        cube(MGN9C_SZ);
+        difference(){
+            MOV(DELTA01) cube(MGN9C_SZ-DELTA02);
+            MOV([(MGN9C_X-MGN9C_C)*0.5, (MGN9C_Y-MGN9C_B)*0.5, 0]) cylinder(d=3, h=MGN9C_Z);
+            MOV([(MGN9C_X+MGN9C_C)*0.5, (MGN9C_Y+MGN9C_B)*0.5, 0]) cylinder(d=3, h=MGN9C_Z);
+            MOV([(MGN9C_X-MGN9C_C)*0.5, (MGN9C_Y+MGN9C_B)*0.5, 0]) cylinder(d=3, h=MGN9C_Z);
+            MOV([(MGN9C_X+MGN9C_C)*0.5, (MGN9C_Y-MGN9C_B)*0.5, 0]) cylinder(d=3, h=MGN9C_Z);
+        }
+    
 }
