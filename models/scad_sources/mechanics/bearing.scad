@@ -9,22 +9,22 @@ MOV(X(30)) LEAD_SCREW_NUT();
 MOV(X(60)) F623ZZ();
 
 module F623ZZ(){
-    color(ROD_COLOR)
+    color(BEARING_COLOR)
         difference(){
             union(){
                 cylinder(d=11.5,h=1);
-                cylinder(d=10,h=4);
+                cylinder(d=F623_D,h=F623_H);
                 
             }
-            MOV(Z(-0.5))
-                cylinder(d=3,h=5);
+            MOV(Z(-0.1))
+                cylinder(d=3,h=F623_H+0.2);
             
         }
     
 }
 
 module LMK12LUU(){
-    color(ROD_COLOR)
+    color(BEARING_COLOR)
         difference(){
             union(){
                 cylinder(d=21,h=57);
