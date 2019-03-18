@@ -8,6 +8,7 @@ MOV(X(10)) M3SPACER_L();
 MOV(X(20)) M3NUT();
 MOV(X(30)) M3SCREW(12);
 MOV(X(40)) M3SPACER_PRINT(12);
+MOV(X(50)) M3TNUT();
 
 module M3SCREW(length){
     color(SCREW_COLOR)
@@ -49,4 +50,12 @@ module M3NUT(){
             cylinder(d=M3_D,h=M3_H,$fn=6);
             MOV(Z(-0.1)) cylinder(d=3,h=M3_D+0.2);
         }
+}
+
+module M3TNUT(){
+    M3NUT();
+    // https://www.thingiverse.com/thing:3050607
+    color(PRINT_COLOR)
+        MOV_ROT([0,3,2], X(90))
+            import("t_nut_m3.stl", convexity=1);
 }
