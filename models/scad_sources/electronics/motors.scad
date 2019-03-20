@@ -3,7 +3,7 @@ include <../config.scad>
 use <../utils.scad>;
 // NEMA17 
 // https://www.thingiverse.com/thing:67561
-MOTOR_X1();
+MOTOR_X2();
 
 module NEMA17(){
     color(MOTORS_COLOR)
@@ -93,7 +93,7 @@ module MOTOR_MOUNT(){
 module MOTOR_X2(){
     NEMA17();
     MOTOR_MOUNT();
-    MOV_ROT([7, -7, 24], Y(-90)) 
+    MOV_ROT([-7, -7, 40], Y(90)) 
         GT2PULLEY20();
 }
 
